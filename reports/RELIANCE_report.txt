@@ -1,0 +1,30 @@
+============================================================
+TRADEMINE AI RESEARCH REPORT
+============================================================
+
+Symbol : RELIANCE
+Recommendation : BUY
+Confidence : 70%
+Preferred Strategy : RSI_REVERSAL
+
+Technical Reasons
+ - Healthy RSI
+ - MACD Bullish
+
+News : Positive
+Risk : HIGH
+
+Trade Plan
+Entry : 1304.0
+Stop Loss : 1260.73
+Target : 1368.91
+Risk Reward : 1.5
+
+Position Size
+Shares : 23
+Investment : 29992.0
+
+Backtest
+Return : 28.4%
+Win Rate : 88.89%
+Max Drawdown : 6.22%
