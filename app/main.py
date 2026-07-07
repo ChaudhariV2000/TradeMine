@@ -750,3 +750,33 @@ trade_feedback_service = TradeFeedbackService()
 @app.get("/analytics/trade-feedback")
 def trade_feedback_summary():
     return trade_feedback_service.summary()
+
+@app.get("/analytics/trade-feedback/details")
+def trade_feedback_details():
+    rows = trade_feedback_service.repo.all()
+
+    return [
+        {
+            "id": r.id,
+            "symbol": r.symbol,
+            "strategy": r.strategy,
+            "recommendation": r.recommendation,
+            "confidence": r.confidence,
+            "technical_score": r.technical_score,
+            "news_score": r.news_score,
+            "risk_score": r.risk_score,
+            "fundamental_score": r.fundamental_score,
+            "entry_price": r.entry_price,
+            "exit_price": r.exit_price,
+            "shares": r.shares,
+            "pnl": r.pnl,
+            "outcome": r.outcome,
+            "exit_reason": r.exit_reason,
+            "entry_date": r.entry_date,
+            "exit_date": r.exit_date,
+            "holding_days": r.holding_days,
+            "created_at": r.created_at,
+            
+        }
+        for r in rows
+    ]
