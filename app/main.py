@@ -742,3 +742,5 @@ def daily_briefing():
         "strategy_analytics": strategy_summary,
         "symbol_analytics": symbol_summary,
     }
+
+    # done
