@@ -143,3 +143,42 @@ class TradeFeedbackService:
         )
 
         return output
+
+    def symbol_breakdown(self):
+        rows = self.repo.all()
+
+        if not rows:
+            return []
+
+        result = {}
+
+        for trade in rows:
+            symbol = trade.symbol
+
+            if symbol not in result:
+                result[symbol] = {
+                    "symbol": symbol,
+                    "total": 0,
+                    "wins": 0,
+                    "losses": 0,
+                    "total_pnl": 0,
+                }
+
+            result[symbol]["total"] += 1
+            result[symbol]["total_pnl"] += trade.pnl or 0
+
+            if trade.outcome == "WIN":
+                result[symbol]["wins"] += 1
+            else:
+                result[symbol]["losses"] += 1
+
+        output = []
+
+        for s in result.values():
+            s["win_rate"] = round((s["wins"] / s["total"]) * 100, 2)
+            s["average_pnl"] = round(s["total_pnl"] / s["total"], 2)
+            output.append(s)
+
+        output.sort(key=lambda x: x["win_rate"], reverse=True)
+
+        return output

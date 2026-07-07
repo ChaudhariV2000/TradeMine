@@ -783,3 +783,7 @@ def trade_feedback_details():
 @app.get("/analytics/trade-feedback/strategies")
 def trade_feedback_strategies():
     return trade_feedback_service.strategy_breakdown()
+
+@app.get("/analytics/trade-feedback/symbols")
+def trade_feedback_symbols():
+    return trade_feedback_service.symbol_breakdown()
