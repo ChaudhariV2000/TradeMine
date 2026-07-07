@@ -776,7 +776,10 @@ def trade_feedback_details():
             "exit_date": r.exit_date,
             "holding_days": r.holding_days,
             "created_at": r.created_at,
-            
+
         }
         for r in rows
     ]
+@app.get("/analytics/trade-feedback/strategies")
+def trade_feedback_strategies():
+    return trade_feedback_service.strategy_breakdown()

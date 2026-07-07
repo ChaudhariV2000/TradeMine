@@ -94,3 +94,52 @@ class TradeFeedbackService:
                 2,
             ),
         }
+    def strategy_breakdown(self):
+        rows = self.repo.all()
+
+        if not rows:
+            return []
+
+        result = {}
+
+        for trade in rows:
+            strategy = trade.strategy
+
+            if strategy not in result:
+                result[strategy] = {
+                    "strategy": strategy,
+                    "total": 0,
+                    "wins": 0,
+                    "losses": 0,
+                    "total_pnl": 0,
+                }
+
+            result[strategy]["total"] += 1
+            result[strategy]["total_pnl"] += trade.pnl or 0
+
+            if trade.outcome == "WIN":
+                result[strategy]["wins"] += 1
+            else:
+                result[strategy]["losses"] += 1
+
+        output = []
+
+        for s in result.values():
+            s["win_rate"] = round(
+                (s["wins"] / s["total"]) * 100,
+                2,
+            )
+
+            s["average_pnl"] = round(
+                s["total_pnl"] / s["total"],
+                2,
+            )
+
+            output.append(s)
+
+        output.sort(
+            key=lambda x: x["win_rate"],
+            reverse=True,
+        )
+
+        return output
