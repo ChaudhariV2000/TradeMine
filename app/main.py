@@ -744,3 +744,9 @@ def daily_briefing():
     }
 
     # done
+
+from app.services.trade_feedback_service import TradeFeedbackService
+trade_feedback_service = TradeFeedbackService()
+@app.get("/analytics/trade-feedback")
+def trade_feedback_summary():
+    return trade_feedback_service.summary()

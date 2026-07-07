@@ -111,3 +111,33 @@ class DecisionJournal(Base):
 
     executed = Column(String)  # YES / NO
     created_at = Column(String)
+
+class TradeFeedback(Base):
+    __tablename__ = "trade_feedback"
+
+    id = Column(Integer, primary_key=True)
+
+    symbol = Column(String)
+    strategy = Column(String)
+
+    recommendation = Column(String)
+    confidence = Column(Float)
+
+    technical_score = Column(Float)
+    news_score = Column(Float)
+    risk_score = Column(Float)
+    fundamental_score = Column(Float)
+
+    entry_price = Column(Float)
+    exit_price = Column(Float)
+    shares = Column(Integer)
+
+    pnl = Column(Float)
+    outcome = Column(String)
+    exit_reason = Column(String)
+
+    entry_date = Column(String)
+    exit_date = Column(String)
+    holding_days = Column(Integer)
+
+    created_at = Column(String)

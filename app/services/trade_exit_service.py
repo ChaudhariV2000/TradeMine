@@ -3,6 +3,7 @@ from datetime import datetime
 from app.collectors.market_collector import MarketCollector
 from app.database.database import SessionLocal
 from app.database.models import PaperTrade
+from app.services.trade_feedback_service import TradeFeedbackService
 
 
 class TradeExitService:
@@ -13,6 +14,7 @@ class TradeExitService:
     def __init__(self):
         self.db = SessionLocal()
         self.collector = MarketCollector()
+        self.feedback_service = TradeFeedbackService()
 
     def check_exits(self):
         open_trades = (
@@ -49,6 +51,12 @@ class TradeExitService:
                     trade.pnl = pnl
 
                     self.db.commit()
+                    self.db.refresh(trade)
+
+                    self.feedback_service.record_trade(
+                        trade,
+                        "STOP_LOSS",
+                    )
 
                     closed.append({
                         "id": trade.id,
@@ -72,6 +80,12 @@ class TradeExitService:
                     trade.pnl = pnl
 
                     self.db.commit()
+                    self.db.refresh(trade)
+
+                    self.feedback_service.record_trade(
+                        trade,
+                        "TARGET",
+                    )
 
                     closed.append({
                         "id": trade.id,
