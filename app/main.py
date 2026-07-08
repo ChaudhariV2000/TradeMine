@@ -787,3 +787,207 @@ def trade_feedback_strategies():
 @app.get("/analytics/trade-feedback/symbols")
 def trade_feedback_symbols():
     return trade_feedback_service.symbol_breakdown()
+
+@app.get("/analytics/trade-feedback/confidence")
+def trade_feedback_confidence():
+    return trade_feedback_service.confidence_breakdown()
+
+@app.get("/analytics/trade-feedback/exits")
+def trade_feedback_exits():
+    return trade_feedback_service.exit_reason_breakdown()
+
+@app.get("/analytics/trade-feedback/overview")
+def trade_feedback_overview():
+    return {
+        "summary": trade_feedback_service.summary(),
+        "strategies": trade_feedback_service.strategy_breakdown(),
+        "symbols": trade_feedback_service.symbol_breakdown(),
+        "confidence": trade_feedback_service.confidence_breakdown(),
+        "exits": trade_feedback_service.exit_reason_breakdown(),
+    }
+@app.get("/analytics/trade-feedback/best-strategy")
+def best_feedback_strategy():
+    strategies = trade_feedback_service.strategy_breakdown()
+
+    if not strategies:
+        return {
+            "best_strategy": None,
+            "message": "No closed trade feedback available yet.",
+        }
+
+    best = sorted(
+        strategies,
+        key=lambda x: (
+            x["win_rate"],
+            x["average_pnl"],
+            x["total"],
+        ),
+        reverse=True,
+    )[0]
+
+    return {
+        "best_strategy": best["strategy"],
+        "details": best,
+    }
+
+@app.get("/analytics/trade-feedback/best-symbol")
+def best_feedback_symbol():
+    symbols = trade_feedback_service.symbol_breakdown()
+
+    if not symbols:
+        return {
+            "best_symbol": None,
+            "message": "No closed trade feedback available yet.",
+        }
+
+    best = sorted(
+        symbols,
+        key=lambda x: (
+            x["win_rate"],
+            x["average_pnl"],
+            x["total"],
+        ),
+        reverse=True,
+    )[0]
+
+    return {
+        "best_symbol": best["symbol"],
+        "details": best,
+    }
+@app.get("/learning/dataset")
+def learning_dataset():
+    rows = trade_feedback_service.repo.all()
+
+    dataset = []
+
+    for r in rows:
+        dataset.append({
+            "symbol": r.symbol,
+            "strategy": r.strategy,
+            "recommendation": r.recommendation,
+            "confidence": r.confidence,
+            "technical_score": r.technical_score,
+            "news_score": r.news_score,
+            "risk_score": r.risk_score,
+            "fundamental_score": r.fundamental_score,
+            "entry_price": r.entry_price,
+            "exit_price": r.exit_price,
+            "shares": r.shares,
+            "holding_days": r.holding_days,
+            "pnl": r.pnl,
+            "exit_reason": r.exit_reason,
+            "outcome": 1 if r.outcome == "WIN" else 0,
+        })
+
+    return {
+        "rows": len(dataset),
+        "dataset": dataset,
+    }
+@app.get("/learning/summary")
+def learning_summary():
+    rows = trade_feedback_service.repo.all()
+
+    wins = [r for r in rows if r.outcome == "WIN"]
+    losses = [r for r in rows if r.outcome == "LOSS"]
+
+    return {
+        "total_records": len(rows),
+        "wins": len(wins),
+        "losses": len(losses),
+        "ready_for_training": len(rows) >= 30,
+        "minimum_required": 30,
+    }
+import pandas as pd
+@app.get("/learning/export")
+def export_learning_dataset():
+    rows = trade_feedback_service.repo.all()
+
+    data = []
+
+    for r in rows:
+        data.append({
+            "symbol": r.symbol,
+            "strategy": r.strategy,
+            "confidence": r.confidence,
+            "technical_score": r.technical_score,
+            "news_score": r.news_score,
+            "risk_score": r.risk_score,
+            "fundamental_score": r.fundamental_score,
+            "holding_days": r.holding_days,
+            "pnl": r.pnl,
+            "outcome": 1 if r.outcome == "WIN" else 0,
+        })
+
+    file = settings.DATA_DIR / "learning_dataset.csv"
+
+    pd.DataFrame(data).to_csv(file, index=False)
+
+    return {
+        "saved_to": str(file),
+        "rows": len(data),
+    }
+@app.get("/learning/status")
+def learning_status():
+    rows = trade_feedback_service.repo.all()
+
+    count = len(rows)
+
+    if count < 30:
+        status = "NOT_READY"
+        message = "Need more closed trade feedback before training ML model."
+    elif count < 100:
+        status = "EARLY_STAGE"
+        message = "Enough data for experimental model only."
+    else:
+        status = "READY"
+        message = "Enough data for initial ML training."
+
+    return {
+        "status": status,
+        "records": count,
+        "message": message,
+    }
+
+@app.get("/learning/features")
+def learning_features():
+    return {
+        "features": [
+            "confidence",
+            "technical_score",
+            "news_score",
+            "risk_score",
+            "fundamental_score",
+            "holding_days",
+        ],
+        "target": "outcome",
+    }
+
+@app.get("/learning/statistics")
+def learning_statistics():
+    rows = trade_feedback_service.repo.all()
+
+    if not rows:
+        return {}
+
+    return {
+        "records": len(rows),
+        "average_confidence": round(
+            sum(r.confidence or 0 for r in rows) / len(rows), 2
+        ),
+        "average_pnl": round(
+            sum(r.pnl or 0 for r in rows) / len(rows), 2
+        ),
+        "average_holding_days": round(
+            sum(r.holding_days or 0 for r in rows) / len(rows), 2
+        ),
+    }
+@app.get("/learning/config")
+def learning_config():
+    return {
+        "model": "XGBoost",
+        "objective": "Binary Classification",
+        "prediction": "WIN / LOSS",
+        "target_column": "outcome",
+        "minimum_training_records": 30,
+        "recommended_records": 200,
+    }
