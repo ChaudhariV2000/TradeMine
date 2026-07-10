@@ -28,12 +28,31 @@ from app.repositories.settings_repository import SettingsRepository
 from app.paper_trading.paper_trader import PaperTrader
 from app.services.trading_service import TradingService
 from app.portfolio.portfolio_manager import PortfolioManager
+from contextlib import asynccontextmanager
+from app.services.auto_trade_executer_service import AutoPaperTradeExecutor
+
 
 trading_service = TradingService()
 watchlist = WatchlistService()
+auto_paper_trade_executor = AutoPaperTradeExecutor()
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    auto_paper_trade_executor.configure(
+        scan
+    )
+
+    auto_paper_trade_executor.start()
+
+    yield
+
+    auto_paper_trade_executor.stop()
 
 
-app = FastAPI(title=settings.APP_NAME)
+app = FastAPI(
+    title=settings.APP_NAME,
+    lifespan=lifespan,
+)
 
 from app.database.database import engine
 from app.database.database import Base
@@ -183,6 +202,9 @@ def research(symbol: str, refresh: bool = False, capital: float = 100000,
             "volatility": artifact.metadata["market_volatility"],
         },
         "committee": artifact.metadata["committee"],
+        "ml_prediction": artifact.metadata["ml_prediction"],
+        "hybrid_score": artifact.metadata["hybrid_score"],
+        "hybrid_decision": artifact.metadata["hybrid_decision"],
        
     }
 @app.get("/scan")
@@ -991,3 +1013,49 @@ def learning_config():
         "minimum_training_records": 30,
         "recommended_records": 200,
     }
+
+from app.services.ml_training_service import MLTrainingService
+ml_training_service = MLTrainingService()
+@app.post("/learning/train")
+def train_learning_model():
+    return ml_training_service.train()
+
+from app.services.ml_prediction_service import MLPredictionService
+ml_prediction_service = MLPredictionService()
+@app.get("/learning/predict")
+def predict_trade():
+
+    return ml_prediction_service.predict(
+        confidence=90,
+        technical_score=85,
+        news_score=80,
+        risk_score=75,
+        fundamental_score=70,
+        holding_days=5,
+    )
+
+@app.get("/automation/status")
+def automation_status():
+    return auto_paper_trade_executor.status()
+
+
+@app.get("/automation/history")
+def automation_history(limit: int = 20):
+    return auto_paper_trade_executor.history(
+        limit=limit
+    )
+
+
+@app.post("/automation/run-now")
+def automation_run_now():
+    return auto_paper_trade_executor.run_now()
+
+
+@app.post("/automation/enable")
+def automation_enable():
+    return auto_paper_trade_executor.enable()
+
+
+@app.post("/automation/disable")
+def automation_disable():
+    return auto_paper_trade_executor.disable()

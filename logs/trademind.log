@@ -1466,3 +1466,5 @@
 2026-07-07 16:39:25.935 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
 2026-07-07 16:39:27.003 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HINDUNILVR
 2026-07-07 16:39:27.151 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-07 18:18:19.829 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-07 18:18:20.061 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
