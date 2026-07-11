@@ -198,3 +198,12 @@ class PortfolioService:
             "cash_remaining": round(capital - invested, 2),
             "stocks": portfolio,
         }
+    def add_cash(self, amount: float):
+        settings = self.settings_repo.add_cash(amount)
+
+        return {
+            "status": "SUCCESS",
+            "deposit": round(amount, 2),
+            "monthly_budget": settings.monthly_budget,
+            "portfolio": self.current_portfolio(),
+        }

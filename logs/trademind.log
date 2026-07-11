@@ -1468,3 +1468,232 @@
 2026-07-07 16:39:27.151 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
 2026-07-07 18:18:19.829 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
 2026-07-07 18:18:20.061 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-10 05:20:15.541 | INFO     | app.services.auto_trade_executer_service:start:96 - Auto paper trade executor started
+2026-07-10 05:21:18.193 | INFO     | app.collectors.market_collector:collect:39 - Downloading RELIANCE
+2026-07-10 05:21:24.892 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:25.023 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-10 05:21:25.023 | INFO     | app.collectors.market_collector:collect:39 - Downloading TCS
+2026-07-10 05:21:25.276 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:25.457 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-10 05:21:25.458 | INFO     | app.collectors.market_collector:collect:39 - Downloading INFY
+2026-07-10 05:21:25.718 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:25.938 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-10 05:21:25.939 | INFO     | app.collectors.market_collector:collect:39 - Downloading HDFCBANK
+2026-07-10 05:21:26.211 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:26.356 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-10 05:21:26.356 | INFO     | app.collectors.market_collector:collect:39 - Downloading ICICIBANK
+2026-07-10 05:21:26.620 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:26.818 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-10 05:21:26.818 | INFO     | app.collectors.market_collector:collect:39 - Downloading SBIN
+2026-07-10 05:21:27.074 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:27.239 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-10 05:21:27.240 | INFO     | app.collectors.market_collector:collect:39 - Downloading LT
+2026-07-10 05:21:27.471 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:27.562 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-10 05:21:27.562 | INFO     | app.collectors.market_collector:collect:39 - Downloading BHARTIARTL
+2026-07-10 05:21:27.840 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:27.946 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-10 05:21:27.947 | INFO     | app.collectors.market_collector:collect:39 - Downloading ITC
+2026-07-10 05:21:28.203 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:28.303 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-10 05:21:28.303 | INFO     | app.collectors.market_collector:collect:39 - Downloading HINDUNILVR
+2026-07-10 05:21:28.536 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-10 05:21:28.634 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-10 05:21:28.721 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for RELIANCE
+2026-07-10 05:21:28.812 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-10 05:21:30.884 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for TCS
+2026-07-10 05:21:30.994 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-10 05:21:33.279 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for INFY
+2026-07-10 05:21:33.394 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-10 05:21:35.319 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-10 05:21:35.438 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-10 05:21:37.243 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-10 05:21:37.336 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-10 05:21:39.390 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-10 05:21:39.475 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-10 05:21:41.459 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-10 05:21:41.565 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-10 05:21:43.858 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-10 05:21:43.965 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-10 05:21:45.973 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ITC
+2026-07-10 05:21:46.084 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-10 05:21:47.768 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HINDUNILVR
+2026-07-10 05:21:47.874 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-10 05:21:49.669 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-10 05:21:49.784 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-10 05:21:51.663 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-10 05:21:51.751 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-10 05:21:52.928 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-10 05:21:53.040 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-10 05:21:54.495 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-10 05:21:54.596 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-10 05:21:55.987 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-10 05:21:56.168 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:16:40.769 | INFO     | app.services.auto_trade_executer_service:stop:106 - Auto paper trade executor stopped
+2026-07-11 04:31:20.355 | INFO     | app.services.auto_trade_executer_service:start:96 - Auto paper trade executor started
+2026-07-11 04:40:26.217 | INFO     | app.services.auto_trade_executer_service:start:96 - Auto paper trade executor started
+2026-07-11 04:42:38.999 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for RELIANCE
+2026-07-11 04:42:39.520 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-11 04:42:45.587 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for TCS
+2026-07-11 04:42:45.855 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-11 04:42:47.913 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for INFY
+2026-07-11 04:42:48.128 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-11 04:42:50.565 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-11 04:42:50.651 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-11 04:42:52.910 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-11 04:42:52.997 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-11 04:42:55.731 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-11 04:42:55.813 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-11 04:42:57.707 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for RELIANCE
+2026-07-11 04:42:57.816 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-11 04:42:58.392 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-11 04:42:58.589 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:42:59.826 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for TCS
+2026-07-11 04:42:59.988 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-11 04:43:01.220 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for INFY
+2026-07-11 04:43:01.283 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-11 04:43:01.329 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-11 04:43:01.758 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-11 04:43:02.820 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-11 04:43:02.907 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-11 04:43:04.004 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ITC
+2026-07-11 04:43:04.322 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-11 04:43:04.614 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-11 04:43:04.716 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-11 04:43:05.913 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-11 04:43:05.918 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HINDUNILVR
+2026-07-11 04:43:06.040 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-11 04:43:06.177 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-11 04:43:07.611 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-11 04:43:07.717 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:43:08.988 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-11 04:43:09.108 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-11 04:43:10.641 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ITC
+2026-07-11 04:43:10.745 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-11 04:43:12.266 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HINDUNILVR
+2026-07-11 04:43:12.437 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-11 04:43:52.752 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for RELIANCE
+2026-07-11 04:43:52.949 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-11 04:43:56.021 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for TCS
+2026-07-11 04:43:56.215 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-11 04:43:58.687 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for INFY
+2026-07-11 04:43:59.085 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-11 04:44:02.346 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-11 04:44:02.517 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-11 04:44:05.131 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-11 04:44:05.230 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-11 04:44:08.356 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-11 04:44:08.792 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-11 04:44:11.850 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-11 04:44:12.168 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:44:12.745 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for RELIANCE
+2026-07-11 04:44:12.874 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-11 04:44:14.380 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for TCS
+2026-07-11 04:44:14.584 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-11 04:44:14.984 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-11 04:44:15.257 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-11 04:44:16.146 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for INFY
+2026-07-11 04:44:16.311 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-11 04:44:17.419 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ITC
+2026-07-11 04:44:17.542 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-11 04:44:17.809 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-11 04:44:17.927 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-11 04:44:20.080 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-11 04:44:20.289 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HINDUNILVR
+2026-07-11 04:44:20.298 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-11 04:44:20.464 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-11 04:44:25.509 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-11 04:44:25.642 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-11 04:44:28.071 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-11 04:44:28.191 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:44:30.025 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-11 04:44:30.180 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-11 04:44:32.521 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ITC
+2026-07-11 04:44:32.729 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-11 04:44:35.603 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HINDUNILVR
+2026-07-11 04:44:35.750 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-11 04:45:06.245 | INFO     | app.collectors.market_collector:collect:39 - Downloading RELIANCE
+2026-07-11 04:45:16.313 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:16.430 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-11 04:45:16.430 | INFO     | app.collectors.market_collector:collect:39 - Downloading TCS
+2026-07-11 04:45:16.622 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:16.722 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-11 04:45:16.723 | INFO     | app.collectors.market_collector:collect:39 - Downloading INFY
+2026-07-11 04:45:16.927 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:17.021 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-11 04:45:17.022 | INFO     | app.collectors.market_collector:collect:39 - Downloading HDFCBANK
+2026-07-11 04:45:17.220 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:17.323 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-11 04:45:17.323 | INFO     | app.collectors.market_collector:collect:39 - Downloading ICICIBANK
+2026-07-11 04:45:17.487 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:17.584 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-11 04:45:17.585 | INFO     | app.collectors.market_collector:collect:39 - Downloading SBIN
+2026-07-11 04:45:17.769 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:17.873 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-11 04:45:17.874 | INFO     | app.collectors.market_collector:collect:39 - Downloading LT
+2026-07-11 04:45:18.061 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:18.174 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:45:18.175 | INFO     | app.collectors.market_collector:collect:39 - Downloading BHARTIARTL
+2026-07-11 04:45:18.305 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:18.515 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-11 04:45:18.516 | INFO     | app.collectors.market_collector:collect:39 - Downloading ITC
+2026-07-11 04:45:18.773 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:18.950 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-11 04:45:18.951 | INFO     | app.collectors.market_collector:collect:39 - Downloading HINDUNILVR
+2026-07-11 04:45:19.206 | INFO     | app.collectors.market_collector:collect:47 - Downloaded 1238 rows
+2026-07-11 04:45:19.380 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-11 04:45:19.476 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for RELIANCE
+2026-07-11 04:45:19.622 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-11 04:45:21.709 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for TCS
+2026-07-11 04:45:21.823 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-11 04:45:23.995 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for INFY
+2026-07-11 04:45:24.155 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-11 04:45:26.103 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-11 04:45:26.223 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-11 04:45:28.283 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-11 04:45:28.469 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-11 04:45:30.230 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-11 04:45:30.393 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-11 04:45:32.464 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-11 04:45:32.616 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:45:34.619 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-11 04:45:34.869 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-11 04:45:36.833 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ITC
+2026-07-11 04:45:36.989 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-11 04:45:38.636 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HINDUNILVR
+2026-07-11 04:45:38.810 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-11 04:45:41.017 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-11 04:45:41.211 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-11 04:45:42.684 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-11 04:45:42.805 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-11 04:45:44.267 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-11 04:45:44.372 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-11 04:45:45.462 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-11 04:45:45.633 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-11 04:45:47.029 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-11 04:45:47.190 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:45:48.840 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for RELIANCE
+2026-07-11 04:45:49.039 | INFO     | app.collectors.market_collector:save:68 - Saved data\RELIANCE.csv
+2026-07-11 04:45:50.595 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for TCS
+2026-07-11 04:45:50.729 | INFO     | app.collectors.market_collector:save:68 - Saved data\TCS.csv
+2026-07-11 04:45:51.797 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for INFY
+2026-07-11 04:45:51.947 | INFO     | app.collectors.market_collector:save:68 - Saved data\INFY.csv
+2026-07-11 04:45:53.158 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HDFCBANK
+2026-07-11 04:45:53.312 | INFO     | app.collectors.market_collector:save:68 - Saved data\HDFCBANK.csv
+2026-07-11 04:45:54.620 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ICICIBANK
+2026-07-11 04:45:54.767 | INFO     | app.collectors.market_collector:save:68 - Saved data\ICICIBANK.csv
+2026-07-11 04:45:56.105 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for SBIN
+2026-07-11 04:45:56.241 | INFO     | app.collectors.market_collector:save:68 - Saved data\SBIN.csv
+2026-07-11 04:45:57.350 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for LT
+2026-07-11 04:45:57.491 | INFO     | app.collectors.market_collector:save:68 - Saved data\LT.csv
+2026-07-11 04:45:59.021 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for BHARTIARTL
+2026-07-11 04:45:59.171 | INFO     | app.collectors.market_collector:save:68 - Saved data\BHARTIARTL.csv
+2026-07-11 04:46:00.516 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for ITC
+2026-07-11 04:46:00.701 | INFO     | app.collectors.market_collector:save:68 - Saved data\ITC.csv
+2026-07-11 04:46:01.952 | INFO     | app.collectors.market_collector:collect:27 - Loading cached data for HINDUNILVR
+2026-07-11 04:46:02.069 | INFO     | app.collectors.market_collector:save:68 - Saved data\HINDUNILVR.csv
+2026-07-11 05:02:24.214 | INFO     | app.services.auto_trade_executer_service:stop:106 - Auto paper trade executor stopped
+2026-07-11 05:02:29.568 | INFO     | app.services.auto_trade_executer_service:start:96 - Auto paper trade executor started
+2026-07-11 05:02:50.790 | INFO     | app.services.auto_trade_executer_service:stop:106 - Auto paper trade executor stopped
+2026-07-11 05:02:55.165 | INFO     | app.services.auto_trade_executer_service:start:96 - Auto paper trade executor started
+2026-07-11 05:05:21.205 | INFO     | app.services.auto_trade_executer_service:stop:106 - Auto paper trade executor stopped

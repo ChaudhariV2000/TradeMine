@@ -182,5 +182,222 @@
         ]
       }
     }
+  },
+  {
+    "type": "DAILY_CYCLE",
+    "trigger": "MANUAL",
+    "started_at": "2026-07-11T17:42:36.044311+05:30",
+    "completed_at": "2026-07-11T17:43:09.310871+05:30",
+    "status": "SUCCESS",
+    "result": {
+      "cleanup": {
+        "invalid_trades_closed": 0,
+        "closed": []
+      },
+      "market_refresh": {
+        "symbols_updated": 10,
+        "symbols_failed": 0,
+        "updated": [
+          {
+            "symbol": "RELIANCE",
+            "rows": 1238
+          },
+          {
+            "symbol": "TCS",
+            "rows": 1238
+          },
+          {
+            "symbol": "INFY",
+            "rows": 1238
+          },
+          {
+            "symbol": "HDFCBANK",
+            "rows": 1238
+          },
+          {
+            "symbol": "ICICIBANK",
+            "rows": 1238
+          },
+          {
+            "symbol": "SBIN",
+            "rows": 1238
+          },
+          {
+            "symbol": "LT",
+            "rows": 1238
+          },
+          {
+            "symbol": "BHARTIARTL",
+            "rows": 1238
+          },
+          {
+            "symbol": "ITC",
+            "rows": 1238
+          },
+          {
+            "symbol": "HINDUNILVR",
+            "rows": 1238
+          }
+        ],
+        "errors": []
+      },
+      "trade_exits": {
+        "checked": 2,
+        "closed_count": 0,
+        "still_open_count": 2,
+        "closed": [],
+        "still_open": [
+          {
+            "id": 1,
+            "symbol": "SBIN",
+            "current_price": 1036.0,
+            "stop_loss": 1002.46,
+            "target": 1096.3,
+            "unrealized_pnl": -4.0
+          },
+          {
+            "id": 2,
+            "symbol": "HDFCBANK",
+            "current_price": 824.95,
+            "stop_loss": 772.93,
+            "target": 843.23,
+            "unrealized_pnl": 23.9
+          }
+        ],
+        "errors": []
+      },
+      "trade_entries": {
+        "monthly_budget": 10000.0,
+        "current_month_used": 5162.65,
+        "cash_available": 4837.35,
+        "opened": [
+          {
+            "id": 4,
+            "symbol": "ICICIBANK",
+            "strategy": "RSI_REVERSAL",
+            "entry_price": 1401.2,
+            "stop_loss": 1350.46,
+            "target": 1477.31,
+            "shares": 1,
+            "status": "OPEN",
+            "entry_date": "2026-07-11T05:13:04.537013",
+            "exit_price": null,
+            "exit_date": null,
+            "pnl": 0.0,
+            "investment": 1401.2,
+            "confidence": 87
+          },
+          {
+            "id": 5,
+            "symbol": "BHARTIARTL",
+            "strategy": "EMA_MACD",
+            "entry_price": 1920.4,
+            "stop_loss": 1847.76,
+            "target": 2029.37,
+            "shares": 1,
+            "status": "OPEN",
+            "entry_date": "2026-07-11T05:13:06.104644",
+            "exit_price": null,
+            "exit_date": null,
+            "pnl": 0.0,
+            "investment": 1920.4,
+            "confidence": 85
+          }
+        ],
+        "skipped": [
+          {
+            "symbol": "SBIN",
+            "reason": "Already in portfolio"
+          },
+          {
+            "symbol": "HDFCBANK",
+            "reason": "Already in portfolio"
+          },
+          {
+            "symbol": "LT",
+            "reason": "Allocation exceeds 30% limit"
+          }
+        ],
+        "total_opened": 2
+      },
+      "portfolio": {
+        "summary": {
+          "monthly_budget": 10000.0,
+          "current_month_used": 5162.65,
+          "cash": 4837.35,
+          "invested": 5162.65,
+          "current_value": 5182.55,
+          "unrealized_pnl": 19.9,
+          "return_percent": 0.39,
+          "positions": 4
+        },
+        "holdings": [
+          {
+            "id": 1,
+            "symbol": "SBIN",
+            "strategy": "RSI_REVERSAL",
+            "quantity": 1,
+            "entry_price": 1040.0,
+            "current_price": 1036.0,
+            "investment": 1040.0,
+            "current_value": 1036.0,
+            "pnl": -4.0,
+            "pnl_percent": -0.38,
+            "stop_loss": 1002.46,
+            "target": 1096.3,
+            "status": "OPEN",
+            "entry_date": "2026-07-06T12:19:31.519697"
+          },
+          {
+            "id": 2,
+            "symbol": "HDFCBANK",
+            "strategy": "RSI_REVERSAL",
+            "quantity": 1,
+            "entry_price": 801.05,
+            "current_price": 824.95,
+            "investment": 801.05,
+            "current_value": 824.95,
+            "pnl": 23.9,
+            "pnl_percent": 2.98,
+            "stop_loss": 772.93,
+            "target": 843.23,
+            "status": "OPEN",
+            "entry_date": "2026-07-06T12:19:35.589320"
+          },
+          {
+            "id": 4,
+            "symbol": "ICICIBANK",
+            "strategy": "RSI_REVERSAL",
+            "quantity": 1,
+            "entry_price": 1401.2,
+            "current_price": 1401.2,
+            "investment": 1401.2,
+            "current_value": 1401.2,
+            "pnl": 0.0,
+            "pnl_percent": 0.0,
+            "stop_loss": 1350.46,
+            "target": 1477.31,
+            "status": "OPEN",
+            "entry_date": "2026-07-11T05:13:04.537013"
+          },
+          {
+            "id": 5,
+            "symbol": "BHARTIARTL",
+            "strategy": "EMA_MACD",
+            "quantity": 1,
+            "entry_price": 1920.4,
+            "current_price": 1920.4,
+            "investment": 1920.4,
+            "current_value": 1920.4,
+            "pnl": 0.0,
+            "pnl_percent": 0.0,
+            "stop_loss": 1847.76,
+            "target": 2029.37,
+            "status": "OPEN",
+            "entry_date": "2026-07-11T05:13:06.104644"
+          }
+        ]
+      }
+    }
   }
 ]

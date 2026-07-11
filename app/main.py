@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+# from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.portfolio.portfolio_engine import PortfolioEngine
 from app.repositories.decision_journal_repository import DecisionJournalRepository
 from app.core.artifact import ResearchArtifact
@@ -30,12 +31,21 @@ from app.services.trading_service import TradingService
 from app.portfolio.portfolio_manager import PortfolioManager
 from contextlib import asynccontextmanager
 from app.services.auto_trade_executer_service import AutoPaperTradeExecutor
-
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel, Field
 
 trading_service = TradingService()
 watchlist = WatchlistService()
 auto_paper_trade_executor = AutoPaperTradeExecutor()
+class DepositRequest(BaseModel):
+    amount: float = Field(gt=0)
 
+
+class ManualCloseRequest(BaseModel):
+    exit_price: float | None = Field(
+        default=None,
+        gt=0,
+    )
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     auto_paper_trade_executor.configure(
@@ -52,6 +62,16 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title=settings.APP_NAME,
     lifespan=lifespan,
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 from app.database.database import engine
@@ -1059,3 +1079,52 @@ def automation_enable():
 @app.post("/automation/disable")
 def automation_disable():
     return auto_paper_trade_executor.disable()
+
+@app.post("/portfolio/deposit")
+def deposit_portfolio_cash(
+    request: DepositRequest,
+):
+    try:
+        return portfolio_service.add_cash(
+            request.amount
+        )
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=400,
+            detail=str(exc),
+        ) from exc
+
+
+@app.post("/paper-trades/{trade_id}/close")
+def manually_close_paper_trade(
+    trade_id: int,
+    request: ManualCloseRequest,
+):
+    result = paper_trader.close_trade(
+        trade_id=trade_id,
+        exit_price=request.exit_price,
+    )
+
+    if result["status"] == "NOT_FOUND":
+        raise HTTPException(
+            status_code=404,
+            detail=result["reason"],
+        )
+
+    if result["status"] == "ALREADY_CLOSED":
+        raise HTTPException(
+            status_code=409,
+            detail=result["reason"],
+        )
+
+    if result["status"] == "FAILED":
+        raise HTTPException(
+            status_code=400,
+            detail=result["reason"],
+        )
+
+    result["portfolio"] = (
+        portfolio_service.current_portfolio()
+    )
+
+    return result

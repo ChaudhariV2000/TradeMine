@@ -38,3 +38,18 @@ class SettingsRepository:
         self.db.refresh(settings)
 
         return settings
+    def add_cash(self, amount: float):
+        if amount <= 0:
+            raise ValueError("Deposit amount must be greater than zero.")
+
+        settings = self.get_settings()
+
+        settings.monthly_budget = round(
+            (settings.monthly_budget or 0) + amount,
+            2,
+        )
+
+        self.db.commit()
+        self.db.refresh(settings)
+
+        return settings
