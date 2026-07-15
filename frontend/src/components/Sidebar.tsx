@@ -34,6 +34,30 @@ export function Sidebar() {
         >
           Portfolio
         </NavLink>
+        <NavLink
+  to="/research"
+  className={({ isActive }) =>
+    isActive ? "active" : ""
+  }
+>
+  Research
+</NavLink>
+<NavLink
+  to="/paper-trading"
+  className={({ isActive }) =>
+    isActive ? "active" : ""
+  }
+>
+  Paper Trading
+</NavLink>
+        <NavLink
+  to="/scanner"
+  className={({ isActive }) =>
+    isActive ? "active" : ""
+  }
+>
+  Scanner
+</NavLink>
       </nav>
 
       <div className="sidebar-footer">

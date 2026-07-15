@@ -399,5 +399,29 @@
         ]
       }
     }
+  },
+  {
+    "type": "DAILY_CYCLE",
+    "trigger": "MANUAL",
+    "started_at": "2026-07-14T16:12:51.783829+05:30",
+    "completed_at": "2026-07-14T16:13:21.790491+05:30",
+    "status": "FAILED",
+    "error": "QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30.00 (Background on this error at: https://sqlalche.me/e/20/3o7r)"
+  },
+  {
+    "type": "DAILY_CYCLE",
+    "trigger": "MANUAL",
+    "started_at": "2026-07-14T16:19:48.645762+05:30",
+    "completed_at": "2026-07-14T16:20:37.751233+05:30",
+    "status": "FAILED",
+    "error": "QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30.00 (Background on this error at: https://sqlalche.me/e/20/3o7r)"
+  },
+  {
+    "type": "DAILY_CYCLE",
+    "trigger": "MANUAL",
+    "started_at": "2026-07-14T17:39:25.519983+05:30",
+    "completed_at": "2026-07-14T17:40:29.509998+05:30",
+    "status": "FAILED",
+    "error": "QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30.00 (Background on this error at: https://sqlalche.me/e/20/3o7r)"
   }
 ]
